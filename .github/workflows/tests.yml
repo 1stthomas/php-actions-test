@@ -98,7 +98,8 @@ jobs:
 
       - name: "Tests with coverage"
         if: env.CODE_COVERAGE == 'y'
-        run: php ./vendor/phpunit/phpunit/phpunit --coverage-clover=coverage.clover --debug
+        run: composer test-unit
+#        run: php ./vendor/phpunit/phpunit/phpunit --coverage-clover=coverage.clover --debug
 
 #      - name: "Upload coverage"
 #        if: env.CODE_COVERAGE == 'y'
