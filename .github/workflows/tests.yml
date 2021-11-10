@@ -12,7 +12,7 @@ jobs:
     env:
       LC_ALL: en_US.UTF-8
       CODE_COVERAGE: n
-    continue-on-error: ${{ matrix.php-version == '8.1' }}
+    continue-on-error: ${{ matrix.php-version == '7.2' }}
 
     runs-on: ${{ matrix.operating-system }}
     strategy:
@@ -67,7 +67,7 @@ jobs:
           tools: ${{matrix.composer}}
 
       - name: Enable code coverage
-        if: matrix.php-version == '7.4' && startsWith(matrix.operating-system, 'ubuntu') && matrix.dependencies == 'locked'
+        if: matrix.php-version == '8.0' && startsWith(matrix.operating-system, 'ubuntu') && matrix.dependencies == 'locked'
         run: printf 'CODE_COVERAGE=y\n' >> "$GITHUB_ENV"
 
       - name: "Install lowest dependencies"
