@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="" tests="2" assertions="2" errors="0" failures="0" skipped="0" time="0.012414">
+    <testsuite name="unit" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.009045">
+      <testsuite name="Ht7\PhpActionsTest\Tests\Unit\Examples\Test01Test" file="C:\data\edv\php\misc\php-actions-test\tests\Unit\Examples\Test01Test.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.009045">
+        <testcase name="testDummy" class="Ht7\PhpActionsTest\Tests\Unit\Examples\Test01Test" classname="Ht7.PhpActionsTest.Tests.Unit.Examples.Test01Test" file="C:\data\edv\php\misc\php-actions-test\tests\Unit\Examples\Test01Test.php" line="11" assertions="1" time="0.009045"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="integration" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003369">
+      <testsuite name="Ht7\PhpActionsTest\Tests\Integration\Examples\Test01Test" file="C:\data\edv\php\misc\php-actions-test\tests\Integration\Examples\Test01Test.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.003369">
+        <testcase name="testDummy" class="Ht7\PhpActionsTest\Tests\Integration\Examples\Test01Test" classname="Ht7.PhpActionsTest.Tests.Integration.Examples.Test01Test" file="C:\data\edv\php\misc\php-actions-test\tests\Integration\Examples\Test01Test.php" line="11" assertions="1" time="0.003369"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
