@@ -12,7 +12,7 @@ class Test01Test extends TestCase
     {
         $dummy = new Test01('testtest123');
 
-        $this->assertContains('123', $dummy->getProperty());
+        $this->assertStringContainsString('123', $dummy->getProperty());
     }
 
 }
