@@ -23,15 +23,15 @@
     timeoutForLargeTests="60"
     verbose="true"
 >
-    <filter>
-        <whitelist processUncoveredFilesFromWhitelist="true">
+    <coverage processUncoveredFiles="true">
+        <include>
             <directory suffix=".php">src</directory>
-            <exclude>
-                <directory>api</directory>
-                <directory>tests/Integration</directory>
-            </exclude>
-        </whitelist>
-    </filter>
+        </include>
+        <exclude>
+            <directory>api</directory>
+            <directory>tests/Integration</directory>
+        </exclude>
+    </coverage>
     <logging>
         <log type="junit" target="logs\phpunit_php-actions-test.xml"/>
     </logging>
