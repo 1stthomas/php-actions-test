@@ -32,7 +32,8 @@
         </exclude>
     </coverage>
     <logging>
-        <log type="junit" target="logs\phpunit_php-actions-test.xml"/>
+        <junit outputFile="logs\phpunit_php-actions-test.xml"/>
+        <text outputFile="logs\phpunit_php-actions-test.txt"/>
     </logging>
     <php>
         <ini name="display_errors" value="1" />
