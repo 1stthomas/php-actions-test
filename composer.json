@@ -41,11 +41,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "test": ".\\vendor\\bin\\phpunit --configuration .\\tests\\configuration.xml --colors --testdox",
-        "test-unit": "php vendor/phpunit/phpunit/phpunit --colors --bootstrap tests/bootstrap.php --configuration tests/configuration.xml --testsuite unit",
-        "test-int": "php vendor/phpunit/phpunit/phpunit --colors --bootstrap tests/bootstrap.php --configuration tests/configuration.xml --testsuite integration",
-        "test-unit-win": "php .\\vendor\\phpunit\\phpunit\\phpunit --colors --bootstrap .\\tests\\bootstrap.php --configuration .\\tests\\configuration.xml --testsuite \"ht7 html - unit\"",
-        "test-func-win": "php .\\vendor\\phpunit\\phpunit\\phpunit --colors --bootstrap .\\tests\\bootstrap.php --configuration .\\tests\\configuration.xml --testsuite \"ht7 html - functional\"",
-        "phpv": "php -v"
+        "test-unit": "php vendor/phpunit/phpunit/phpunit --colors --testdox --configuration tests/configuration.xml --testsuite unit",
+        "test-int": "php vendor/phpunit/phpunit/phpunit --colors --testdox --configuration tests/configuration.xml --testsuite integration"
     }
 }
