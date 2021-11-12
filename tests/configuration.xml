@@ -24,11 +24,11 @@
 >
     <coverage processUncoveredFiles="true">
         <include>
-            <directory suffix=".php">src</directory>
+            <directory suffix=".php">../src</directory>
         </include>
         <exclude>
-            <directory>api</directory>
-            <directory>tests/Integration</directory>
+            <directory>../api</directory>
+            <directory>Integration</directory>
         </exclude>
     </coverage>
     <logging>
