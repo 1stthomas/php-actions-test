@@ -136,8 +136,10 @@ jobs:
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
           restore-keys: ${{ runner.os }}-composer-
 
-      - name: Install dependencies
+      - name: Require cs fixer
         run: composer require friendsofphp/php-cs-fixer
+
+      - name: Install dependencies
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
       - name: Run PHP-CS-Fixer
