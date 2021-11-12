@@ -4,7 +4,6 @@ namespace Ht7\PhpActionsTest\Examples;
 
 class Test01
 {
-
     /**
      * A property.
      *
@@ -16,7 +15,6 @@ class Test01
     {
         $this->setProperty($property);
     }
-
     /**
      * Get the property
      *
@@ -26,7 +24,6 @@ class Test01
     {
         return $this->property;
     }
-
     /**
      * Set the property.
      *
@@ -39,5 +36,4 @@ class Test01
 
         return $this;
     }
-
 }
