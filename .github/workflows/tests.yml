@@ -137,6 +137,7 @@ jobs:
           restore-keys: ${{ runner.os }}-composer-
 
       - name: Install dependencies
+        run: composer require friendsofphp/php-cs-fixer
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
       - name: Run PHP-CS-Fixer
