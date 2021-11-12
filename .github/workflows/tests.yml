@@ -27,8 +27,6 @@ jobs:
           - "locked"
         operating-system:
           - "ubuntu-latest"
-          - "macOS-latest"
-          - "windows-latest"
         composer:
           - "composer:v2"
 
