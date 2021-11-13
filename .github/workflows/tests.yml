@@ -106,6 +106,12 @@ jobs:
       - name: Run Tests with Code Coverage
         run: vendor/bin/phpunit  --colors --testdox --configuration tests/configuration.xml --testsuite unit --coverage-clover=coverage.clover
 
+      - uses: codecov/codecov-action@v2
+        with:
+          files: coverage.clover
+          fail_ci_if_error: true
+          verbose: true
+
 #      - name: Send to Scrutinizer
 #        run: |
 #          ls -la coverage.clover
