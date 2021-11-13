@@ -82,7 +82,7 @@ jobs:
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-          path: src/
+          options: --configuration=tests/.phplint.yml
 
   code-coverage:
     name: Code coverage
