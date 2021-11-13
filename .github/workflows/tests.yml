@@ -82,7 +82,7 @@ jobs:
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-          options: --configuration=tests/.phplint.yml
+          options: --configuration=${{ GITHUB_WORKSPACE }}/tests/.phplint.yml
 
   code-coverage:
     name: Code coverage
