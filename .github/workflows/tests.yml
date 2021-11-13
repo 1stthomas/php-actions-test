@@ -88,6 +88,8 @@ jobs:
       - name: Temporary echoing
         id: working-dir
         run: echo "path:$GITHUB_WORKSPACE$${{ env.PHP_LINT_CONFIG }}"
+        run: echo "path:GITHUB_WORKSPACE$${{ env.PHP_LINT_CONFIG }}"
+        run: echo "path:$GITHUB_WORKSPACE${{ env.PHP_LINT_CONFIG }}"
 #        run: echo "path: $${{ env.PHP_LINT_CONFIG }}"
 
   check-syntax-errors:
