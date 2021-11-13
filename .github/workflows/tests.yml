@@ -86,9 +86,15 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Temporary echoing
-        id: working-dir
+        id: working-dir-1
         run: echo "path:$GITHUB_WORKSPACE$${{ env.PHP_LINT_CONFIG }}"
+
+      - name: Temporary echoing
+        id: working-dir-2
         run: echo "path:GITHUB_WORKSPACE$${{ env.PHP_LINT_CONFIG }}"
+
+      - name: Temporary echoing
+        id: working-dir-3
         run: echo "path:$GITHUB_WORKSPACE${{ env.PHP_LINT_CONFIG }}"
 #        run: echo "path: $${{ env.PHP_LINT_CONFIG }}"
 
