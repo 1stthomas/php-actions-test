@@ -75,18 +75,39 @@ jobs:
       - name: Integration tests
         run: composer test-int
 
+  echo-path:
+    name: Echo path
+    runs-on: ubuntu-latest
+    env:
+      PHP_LINT_CONFIG: /tests/.phplint.yml
+#      PHP_LINT_CONFIG: $GITHUB_WORKSPACE/tests/.phplint.yml
+    steps:
+      - name: "Checkout"
+        uses: actions/checkout@v2
+
+      - name: Temporary echoing
+        id: working-dir
+        run: echo "path:$GITHUB_WORKSPACE$${{ env.PHP_LINT_CONFIG }}"
+#        run: echo "path: $${{ env.PHP_LINT_CONFIG }}"
+
   check-syntax-errors:
     name: Check PHP syntax errors
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: "Checkout"
         uses: actions/checkout@v2
+#      - name: "Temporary echoing"
+#        run: echo "path: $${{ env.PHP_LINT_CONFIG }}"
 
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-#          options: --configuration=./tests/.phplint.yml
-          options: --configuration=$GITHUB_WORKSPACE/tests/.phplint.yml
+#          options: --configuration=$${{ env.PHP_LINT_CONFIG }}
+          options: --configuration=./tests/.phplint.yml
+#          options: --configuration=$GITHUB_WORKSPACE/tests/.phplint.yml
+
+#      - name: Temporary echoing
+#        run: echo "path: $${{ env.PHP_LINT_CONFIG }}"
 
   code-coverage:
     name: Code coverage
