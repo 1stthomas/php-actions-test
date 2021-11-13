@@ -75,6 +75,15 @@ jobs:
       - name: Integration tests
         run: composer test-int
 
+  check-syntax-errors:
+    name: Check PHP syntax errors
+    runs-on: ubuntu-latest
+    steps:
+      - name: PHP Lint
+        uses: overtrue/phplint@8.0
+        with:
+          path: src/
+
   code-coverage:
     name: Code coverage
     runs-on: ubuntu-latest
@@ -112,11 +121,6 @@ jobs:
           fail_ci_if_error: true
           verbose: true
 
-#      - name: Send to Scrutinizer
-#        run: |
-#          ls -la coverage.clover
-#          wget https://scrutinizer-ci.com/ocular.phar
-#          php ocular.phar code-coverage:upload --format=php-clover coverage.clover
   coding-style:
     name: Coding Style
     runs-on: ubuntu-latest
