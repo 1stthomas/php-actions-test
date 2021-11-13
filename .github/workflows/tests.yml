@@ -82,7 +82,8 @@ jobs:
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-          options: --configuration=$GITHUB_EVENT_PATH/tests/.phplint.yml
+          options: --configuration=./tests/.phplint.yml
+#          options: --configuration=$GITHUB_EVENT_PATH/tests/.phplint.yml
 
   code-coverage:
     name: Code coverage
