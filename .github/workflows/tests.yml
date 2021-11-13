@@ -79,11 +79,14 @@ jobs:
     name: Check PHP syntax errors
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-          options: --configuration=./tests/.phplint.yml
-#          options: --configuration=$GITHUB_EVENT_PATH/tests/.phplint.yml
+#          options: --configuration=./tests/.phplint.yml
+          options: --configuration=$GITHUB_WORKSPACE/tests/.phplint.yml
 
   code-coverage:
     name: Code coverage
