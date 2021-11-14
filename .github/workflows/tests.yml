@@ -106,6 +106,10 @@ jobs:
         id: working-dir-5
         run: echo "path:${{ env.PHP_LINT_CONFIG2 }}"
 
+      - name: Temporary echoing
+        id: working-dir-6
+        run: echo "$GITHUB_WORKSPACE${{ env.PHP_LINT_CONFIG }}"
+
 #      - name: Temporary echoing
 #        id: working-dir-4
 #        run: echo "path:$${{ $GITHUB_WORKSPACE + env.PHP_LINT_CONFIG }}"
