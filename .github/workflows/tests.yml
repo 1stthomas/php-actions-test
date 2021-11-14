@@ -119,7 +119,7 @@ jobs:
     name: Check PHP syntax errors
     runs-on: ubuntu-latest
     env:
-      PHP_LINT_CONFIG: /tests/.phplint.yml
+      PHP_LINT_CONFIG: tests/.phplint.yml
     steps:
       - name: "Checkout"
         uses: actions/checkout@v2
@@ -127,7 +127,7 @@ jobs:
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
-          options: --configuration="${{$GITHUB_WORKSPACE}}${{ env.PHP_LINT_CONFIG }}"
+          options: --configuration="${{GITHUB_WORKSPACE}}/${{ env.PHP_LINT_CONFIG }}"
 #          options: --configuration=$GITHUB_WORKSPACE${{ env.PHP_LINT_CONFIG }}
 #          options: --configuration=./tests/.phplint.yml
 #          options: --configuration=$GITHUB_WORKSPACE/tests/.phplint.yml
