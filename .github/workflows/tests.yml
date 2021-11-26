@@ -124,6 +124,10 @@ jobs:
       - name: "Checkout"
         uses: actions/checkout@v2
 
+      - name: Temporary echoing
+        id: working-dir-6
+        run: echo "$GITHUB_WORKSPACE/tests/.phplint.yml"
+
       - name: PHP Lint
         uses: overtrue/phplint@8.0
         with:
