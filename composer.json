@@ -41,7 +41,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "test-unit": "php vendor/phpunit/phpunit/phpunit --colors --testdox --configuration tests/configuration.xml --testsuite unit",
-        "test-int": "php vendor/phpunit/phpunit/phpunit --colors --testdox --configuration tests/configuration.xml --testsuite integration"
+        "test-unit": "php vendor/phpunit/phpunit/phpunit --colors --testdox --testsuite unit",
+        "test-int": "php vendor/phpunit/phpunit/phpunit --colors --testdox --testsuite integration"
     }
 }
