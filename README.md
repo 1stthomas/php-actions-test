@@ -1,3 +1,2 @@
 [![codecov](https://codecov.io/gh/ht7-swiss/php-actions-test/branch/master/graph/badge.svg?token=DU6IGJWHRE)](https://codecov.io/gh/ht7-swiss/php-actions-test)
-[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
-
+[![Project Status: Concept – Minimal or no implementation has been done yet, or the repository is only intended to be a limited example, demo, or proof-of-concept.](https://www.repostatus.org/badges/latest/concept.svg)](https://www.repostatus.org/#concept)
